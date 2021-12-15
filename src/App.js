@@ -1,41 +1,38 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "reactstrap";
+import { Button, Col, Container, Row } from "reactstrap";
 import { ToastContainer, toast } from "react-toastify";
 import Home from "./component/Home";
-
-// import Header from "./component/Header";
+import Course from "./component/Course";
+import Allcourses from "./component/Allcourses";
+import AddCourse from "./component/AddCourse";
+import Header from "./component/Header";
+import Menus from "./component/Menus";
 
 function App() {
-
-  const btnHandle= ()=>{
-    // toast("This is my first message");
-    toast.success("Done!",{
-      position:"top-center"
+  const btnHandle = () => {
+    toast.success("Done!", {
+      position: "top-center",
     });
   };
 
   return (
     <div>
-      <ToastContainer/>
-      <Home/>
-        {/* <h1> This is react app</h1>
-        <Button color="warning" outline onClick={btnHandle}>First React Button</Button> */}
-      
+      <ToastContainer />
+
+      <Container>
+        <Header/>
+        <Row>
+          <Col md={4}>
+            <Menus/>
+          </Col>
+          <Col md={8}>
+            <Home/>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
 
 export default App;
-
-// return (
-//   <div>
-//     <Header name="Hitesh Sahu" title="First Card"/>
-//     <hr/>
-//     <Header name="Muskan Sahu" title="Second Card"/>    {/*props*/}
-//     <hr/>
-//     <h1>This is my react Application</h1>
-//     <Header name="Hiteshhhhhhh Sahu" title="Third Card"/>
-//     <hr/>
-//   </div>
-// );
