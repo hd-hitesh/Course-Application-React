@@ -8,6 +8,7 @@ import Allcourses from "./component/Allcourses";
 import AddCourse from "./component/AddCourse";
 import Header from "./component/Header";
 import Menus from "./component/Menus";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   const btnHandle = () => {
@@ -18,19 +19,20 @@ function App() {
 
   return (
     <div>
-      <ToastContainer />
-
-      <Container>
-        <Header/>
-        <Row>
-          <Col md={4}>
-            <Menus/>
-          </Col>
-          <Col md={8}>
-            <Home/>
-          </Col>
-        </Row>
-      </Container>
+      <Router>
+        <ToastContainer />
+        <Container>
+          <Header />
+          <Row>
+            <Col md={4}>
+              <Menus />
+            </Col>
+            <Col md={8}>
+              <Route exact path="/" component={Home} />
+            </Col>
+          </Row>
+        </Container>
+      </Router>
     </div>
   );
 }

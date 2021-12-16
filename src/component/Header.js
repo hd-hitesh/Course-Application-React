@@ -11,6 +11,6 @@ function Header() {
       </Card>
     </div>
   );
-}
+};
 
 export default Header;
