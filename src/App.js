@@ -8,7 +8,7 @@ import Allcourses from "./component/Allcourses";
 import AddCourse from "./component/AddCourse";
 import Header from "./component/Header";
 import Menus from "./component/Menus";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
   const btnHandle = () => {
@@ -28,7 +28,11 @@ function App() {
               <Menus />
             </Col>
             <Col md={8}>
-              <Route exact path="/" component={Home} />
+              <Routes>
+                <Route exact path="/" component={Home} />
+                <Route path="/add-course" component={AddCourse} />
+                <Route path="/view-courses" component={Allcourses} />
+              </Routes>
             </Col>
           </Row>
         </Container>
