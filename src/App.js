@@ -29,9 +29,9 @@ function App() {
             </Col>
             <Col md={8}>
               <Routes>
-                <Route exact path="/" component={Home} />
-                <Route path="/add-course" component={AddCourse} />
-                <Route path="/view-courses" component={Allcourses} />
+                <Route exact path="/" element={<Home />} />
+                <Route path="/add-course" element={<AddCourse />} />
+                <Route path="/view-courses" element={<Allcourses />} />
               </Routes>
             </Col>
           </Row>

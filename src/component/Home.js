@@ -1,9 +1,20 @@
-import react from "react";
+import react,{useEffect} from "react";
 import { Container, Button } from "reactstrap";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home || Learn code with Hitesh";
+  }, []);
+
   return (
-    <div style={{ background: "skyblue", padding: 20, textAlign: "center",marginBottom:20 }}>
+    <div
+      style={{
+        background: "skyblue",
+        padding: 20,
+        textAlign: "center",
+        marginBottom: 20,
+      }}
+    >
       <h1 className="display-3">Learn Code with Hitesh</h1>
       <p>
         Make quality education in reach of everyone. Latest and greatest
@@ -11,7 +22,7 @@ const Home = () => {
       </p>
       <hr />
       <Container>
-        <Button color="primary" >Start Using</Button>
+        <Button color="primary">Start Using</Button>
       </Container>
     </div>
   );
